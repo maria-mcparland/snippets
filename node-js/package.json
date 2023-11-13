@@ -1,0 +1,15 @@
+{
+  "name": "oauth-js",
+  "version": "1.0.0",
+  "description": "Node JS snippet for OAuth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "maria-mcparland",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "simple-oauth2": "^5.0.0"
+  }
+}
