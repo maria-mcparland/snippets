@@ -56,7 +56,7 @@ jobs:
         runs-on: ubuntu-latest
         defaults:
             run: 
-              working-directory: './OAuth/java'
+              working-directory: './oauth-integration/java'
         steps:
         - uses: actions/checkout@v3
         - name: Set up JDK 17
