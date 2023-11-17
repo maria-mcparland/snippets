@@ -33,7 +33,7 @@ Execute the following command to run the code:
 
 ```bash
     pip install oauthlib requests requests_oauthlib python_dotenv
-    python index.py
+    python oauth.py
 ```
 
 This will output the access token and the refreshed token if applicable.

@@ -35,7 +35,8 @@ def refreshTokenIfExpired(token):
     # Check if the access token is expired
     current_time = int(time.time())
     expiration_time = token.get('expires_at', 0)
-
+    print(current_time);
+    print(expiration_time)
     if expiration_time <= current_time:
         print("Token is expired. Refreshing...")
         token = generateAccessToken();
@@ -45,10 +46,5 @@ def refreshTokenIfExpired(token):
         return token;
 
 
-access_token = generateAccessToken();
-print("Access Token:", access_token)
-
-refresh_token = refreshTokenIfExpired(access_token);
-print("Refreshed Token:", refresh_token)
-
+#
 
