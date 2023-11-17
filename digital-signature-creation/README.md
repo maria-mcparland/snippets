@@ -8,7 +8,7 @@ We have generated the initial code using the ChatGPT API and then corrected erro
 You can manually clone and configure the example yourself:
 
 ```
-git clone https://github.com/jpmorganchase/global-payments.git
+git clone
 ```
 
 This example includes several different language implementations.
