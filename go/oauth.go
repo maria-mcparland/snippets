@@ -53,6 +53,7 @@ func main() {
 func generateAccessToken(client *http.Client) (string, error) {
 	// Obtain access token
 	token, err := client.Transport.(*oauth2.Transport).Source.Token()
+	fmt.Println(token)
 	if err != nil {
 		return "", err
 	}
