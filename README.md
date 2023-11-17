@@ -1,1 +1,1 @@
-# oath-snippets
+# OAuth-snippets
