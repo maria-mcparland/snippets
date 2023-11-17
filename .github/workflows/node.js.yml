@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run: 
-        working-directory: './node-js'
+        working-directory: './OAuth/node-js'
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
@@ -28,7 +28,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
-        cache-dependency-path: './node-js/yarn.lock'
+        cache-dependency-path: './OAuth/node-js/yarn.lock'
     - name: Install depdendencies
       run: yarn install --frozen-lockfile
     - name: 'Create env file'
