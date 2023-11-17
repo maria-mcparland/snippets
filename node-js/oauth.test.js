@@ -2,13 +2,6 @@
 
 require('dotenv').config();
 const { ClientCredentials } = require("simple-oauth2");
-const {
-  CLIENT_ID,
-  CLIENT_SECRET,
-  TOKEN_HOST,
-  TOKEN_PATH,
-  SCOPE
-} = process.env;
 
 const { generateAccessToken, refreshTokenIfExpired, run } = require('./oauth');
 
