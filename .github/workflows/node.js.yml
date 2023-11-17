@@ -13,7 +13,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    defaults:
+      run: 
+        working-directory: './node-js'
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
@@ -27,8 +29,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
     - name: Install depdendencies
-      working-directory: './node-js'
       run: yarn install --frozen-lockfile
     - name: Tests
-      working-directory: './node-js'      
       run: yarn test
