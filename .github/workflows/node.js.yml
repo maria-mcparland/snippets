@@ -33,12 +33,8 @@ jobs:
       run: yarn install --frozen-lockfile
     - name: 'Create env file'
       run: |
-        touch .env
-        echo CLIENT_ID="CLIENT_ID" >> .env
-        echo CLIENT_SECRET="CLIENT_SECRET" >> .env
-        echo TOKEN_HOST="https://id.payments.jpmorgan.com/" >> .env
-        echo TOKEN_PATH="am/oauth2/alpha/access_token" >> .env
-        echo SCOPE="jpm:payments:sandbox" >> .env
-        cat .env      
+        ls
+        cp ../.env.example node-js/.env
+        ls
     - name: Tests
       run: yarn test
