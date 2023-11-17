@@ -47,4 +47,9 @@ async function run() {
   console.log(refreshToken);
 }
 
-run();
+
+module.exports = {
+  generateAccessToken,
+  refreshTokenIfExpired,
+  run
+};

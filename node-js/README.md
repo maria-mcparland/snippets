@@ -35,7 +35,7 @@ Execute the following command to run the code:
 
 ```bash
     yarn
-    node index.js
+    yarn start
 ```
 
 This will output the access token and the refreshed token if applicable.
