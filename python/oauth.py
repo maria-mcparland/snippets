@@ -44,10 +44,12 @@ def refreshTokenIfExpired(token):
         return token;
 
 
-access_token = generateAccessToken();
-print("Access Token:", access_token)
+def run():
 
-refresh_token = refreshTokenIfExpired(access_token);
-print("Refreshed Token:", refresh_token)
+    access_token = generateAccessToken();
+    print("Access Token:", access_token)
+
+    refresh_token = refreshTokenIfExpired(access_token);
+    print("Refreshed Token:", refresh_token)
 
 
