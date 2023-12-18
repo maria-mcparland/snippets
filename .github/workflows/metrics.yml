@@ -5,9 +5,6 @@ name: Run metrics
 
 on:
   workflow_dispatch:
-  workflow_run:
-    branches:
-      - "metrics"
 jobs:
   generate-metrics:
     runs-on: ubuntu-latest
