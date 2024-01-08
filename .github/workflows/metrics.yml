@@ -37,9 +37,9 @@ jobs:
           ls
       - name: Run merge script
         run: |
-          ./merge.sh clone-stats.csv ./merged-file-clone.csv      
-          ./merge.sh traffic-stats.csv ./merged-file-traffic.csv
-          ./merge.sh referrer-stats.csv ./merged-file-referrer.csv
+          ./merge.sh clone-stats.csv merged-file-clone    
+          ./merge.sh traffic-stats.csv merged-file-traffic
+          ./merge.sh referrer-stats.csv merged-file-referrer
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Apply metrics changes
