@@ -14,7 +14,7 @@ if [ -z "$2" ]; then
   exit 1
 fi
 # Access the first command-line argument
-output_file="$2"
+output_file="./${2}.csv"
 
 # Specify the input file names
 file1="1.csv"
@@ -37,6 +37,24 @@ head -n 1 "$file1" > "$output_file"
 awk -F, 'NR==FNR && FNR>1 {a[$2]=$0; next} FNR>1 {a[$2]=$0} END {for (i in a) print a[i]}' "$file1" "$file2" >> "$output_file"
 
 echo "Files merged successfully. Output file: $output_file"
+echo "Sorting Output file..."
+
+# Check if the file exists
+if [ ! -f "$output_file" ]; then
+  echo "Error: File '$output_file' not found."
+  exit 1
+fi
+
+# Sort the CSV file by the second column (date)
+sorted_csv_file="./${2}_sorted.csv"
+if [ -e "$sorted_csv_file" ]; then
+  rm "$sorted_csv_file"
+fi
+{ head -n 1 "$output_file"; tail -n +2 "$output_file" | sort -t ',' -k2,2; } > "$sorted_csv_file"
+
+echo "CSV file sorted by date. Output file: $sorted_csv_file"
+
+
 if [ -e "$file1" ]; then
   rm "$file1"
 fi
